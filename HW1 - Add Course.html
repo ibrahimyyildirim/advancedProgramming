@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Add Course </title>
+</head>
+
+<script>
+
+var courses = [];
+function Add() { 
+ 
+	var nameS= isim.value; 
+	var midtermS = midterm.value; 
+	var finalS = final.value;
+	
+	courses.push([nameS,midtermS,finalS]);
+	   isim.value=""
+       midterm.value=""
+       final.value=""  
+}
+
+function Print() {
+	printField.innerText =""
+	for (var i = 0; i < courses.length; i++) {
+		printField.innerText += (courses[i].join(" \t------ ")+"\n");
+	}
+}
+	function Average() {
+	avrField.innerText= ""
+		for (var i = 0; i< courses.length; i++) {
+		avr = (Number(courses[i][1])+Number(courses[i][2]))*0.5
+		avrField.innerText += (courses[i][0]+" \t------ "+avr+"\n");
+	}
+}
+
+function Max(){
+	maxField.innerText=""
+	var avr = 0; maxAvr = 0; maxName = 0;
+	for (var i = 0; i< courses.length; i++) {
+		avr = (Number(courses[i][1])+Number(courses[i][2]))*0.5
+		if (avr > maxAvr) {
+			maxAvr = avr;
+			maxName = i;
+		}
+			maxField.innerText = (courses[maxName][0]+" \t------ "+maxAvr);
+	}
+
+}
+
+
+</script>
+<h2 id="title">Add Course</h2>
+<body>
+
+<table>
+  <tr>
+    <td><b>Name</b></td>
+    <td><input 	type=text	 	id=isim 	value="" 	style="width:99px"></td>
+    
+  </tr>
+  <tr>
+    <td><b>Midterm</b></td>
+    <td><input 	type=number     id=midterm	value="" 	style="width:99px"> </td>
+    
+  </tr>
+  <tr>
+    <td><b>Final</b></td>
+    <td><input 	type=number     id=final 	value="" 	style="width:99px"></td>
+
+  </tr>
+ 
+</table>
+
+<p>
+<input type=button value="Add"  	onClick="Add()"> <br> <br>
+<input type=button value="Print"  	onClick="Print()">&emsp;
+<input type=button value="Average"  onClick="Average()">&emsp;
+<input type=button value="Max"   	onClick="Max()">
+</p>
+
+    <hr>
+	<p><b>Name&emsp;Midterm&emsp;Final</b></p>
+	<p id="printField"></p><hr>
+	<p><b>Name&emsp;Average</b></p>
+	<p id="avrField"></p><hr>
+    <p><b>Name&emsp;Max </b></p>
+	<p id="maxField"></p><hr>
+
+</script>
+
+</body>
+</html>
