@@ -1,4 +1,4 @@
-# Avanced Programming
+# Advanced Programming
 
 <a href="https://ibrahimyyildirim.github.io/advancedProgramming/IbrahimYildirim_arrayDemo.html" target="_blank">CW2 - Array Demo</a>
 
