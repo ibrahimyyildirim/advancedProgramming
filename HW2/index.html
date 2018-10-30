@@ -1,0 +1,70 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <script src="database.js"></script>
+    <title>Student Database </title>
+
+  <style>
+    .link {
+        color: blue;
+        cursor: pointer;
+        font-style: italic;
+    }
+    .course {
+        visibility: hidden;
+        font: 10px arial, sans-serif;
+        color: white;
+        background: blue;
+        cursor: text;
+        padding: 6px;
+        position: absolute;
+        height: 90px;
+        overflow-y: auto;
+    }
+    .link:hover .course { 
+        visibility: visible; 
+    }
+  </style>
+ <script>
+ </script>
+ </head>
+
+<body>
+
+<h2 id=title></h2>
+
+<button onClick='db.randomStudent()'>Random Student</button>&emsp;
+<button onClick='db.randomRoom()'>Random Room</button>&emsp;
+<button onClick='db.bestGpa()'>Best GPA</button>&emsp;
+<button onClick='out.innerText=" Result"'>Clear</button>&emsp;
+<hr><p>Course: 
+<input type=text id=crs value="MGT 401" onChange="db.studentListGivenCourse(value)">
+</p>
+<p>Student ID: 
+<input type=number id=stu value="212180050" onChange="db.showStudent(value)">
+</p>
+<button onClick='db.examSchedule(stu.value)'>Exam Schedule</button>
+<p>Room :
+<input type=text value="" id=room onChange="db.courseListGivenRoom(value)">
+</p>
+<button onClick="db.totalNumberOfCourse(room.value)">Total Number Course Of Given Room</button>
+
+<p>Above GPA :
+<input type=number id="gpa" value="" onChange="db.aboveGpa(value)">
+</p>
+
+
+
+<p id=out onClick='db.doClick(event)'>Result:</p>
+
+<hr />
+
+<script>
+    title.innerText = document.title;
+    db = new Database();
+
+</script>
+
+</body>
+</html>
