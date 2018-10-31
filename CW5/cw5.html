@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>#CW5 </title>
+</head>
+
+<script>
+"use strict";
+
+let local= ""
+let remote= ""
+let folder="f"
+let folderName=""
+
+function hide() {
+    state.style.visibility = "hidden";
+}
+function show(v) {
+    state.value = v; state.style.visibility = "";
+}
+function report(a) {
+    show("OK"); setTimeout(hide, 1000);
+    textRemote.innerText = url.value + "  remote dosya okundu."
+    remote=a
+}
+
+function readText() {
+    show("FT"); // fetch text
+    fetch(url.value)
+      .then(r => r.text()) 
+      //response of fetch() is r
+      .then(t => report(t, t.length+" chars"));  
+      //response of text() is t
+}
+
+
+let reader = new FileReader();
+function isText(f) {
+    console.assert(f instanceof File);
+    return f.type.startsWith("text") || f.name.endsWith(".md")
+         || f.name.endsWith(".js")   || f.name.endsWith(".java");
+}
+
+function fileSelect(t)
+
+ { //target is the button
+  textLocal.innerHTML=""
+  msg.innerHTML=""
+  found.innerHTML=""
+
+  folder="f"
+   
+    console.assert(t == button);
+    let f = t.files[0];
+    let size=0
+  
+    for(let i =0; i<t.files.length; i++)
+    {
+      
+  reader = new FileReader();
+  
+  f = t.files[i]
+   
+    size = " "+f.size+" bytes ";
+    msg.innerHTML +=  "["+(i+1)+"] "+f.name+" --- "+f.type+" --- "+size+"<br>";
+    
+    
+    if (f.type.startsWith("image")) {
+        reader.onload = function(evt) {
+            const a = evt.target.result; //image source
+
+          textLocal.innerHTML+=
+             local=a
+       if(local==remote)
+              {
+             folder="t"
+         folderName=f.name
+           }        
+        };
+        reader.readAsDataURL(f);
+    } else if (isText(f)) {
+        reader.onload = function(evt) { //text
+            const a = evt.target.result;
+            
+            local=a;
+            if(local==remote)
+             {
+            folder="t"
+          folderName=f.name
+           }
+        };
+        reader.readAsText(f);
+
+    } else {
+        msg.innerHTML += "Unknown ";
+        out.innerHTML = "";
+    }
+    
+  }
+    
+}
+
+function comp()
+{
+   if(folder=="t")
+   {
+   found.innerText="Dosya eşleşti: [" + folderName +"]\n" 
+   
+   } 
+    else
+    {
+  found.innerText="Eşleşme bulunamadı\n"
+  }
+
+}
+
+
+</script>
+
+
+<body>
+  
+<h1>CW5</h1>
+
+<input id=button onChange='fileSelect(this)' type=file  multiple  />
+
+<br>
+
+<input type=text id=url value="https://maeyler.github.io/BLM305/README.md">
+
+<input type=button value="Oku"  onClick="readText()">
+
+<br>
+<button type=button onclick="comp()">Karşılaştır</button> 
+
+<input type=button id=state style="visibility: hidden">
+
+
+
+
+<br>
+<p id=found  style="color:red;"></p>
+
+  <br>
+
+<p id=msg style="text" ></p>
+
+<p id=textLocal style="text" > </p> <br>
+
+<pre id=textRemote style="text" ></pre>
+
+
+
+<style>
+
+input
+ {
+	display: inline-block;
+ }
+ button
+ {
+	width: 110px; 
+	float: left;
+ }
+
+</body>
+</html>
