@@ -1,5 +1,5 @@
 # Advanced Programming
-[CW6](https://ibrahimyyildirim.github.io/advancedProgramming/CW5/timing.html)
+[CW6](https://ibrahimyyildirim.github.io/advancedProgramming/CW6/timing.html)
 
 [CW5](https://ibrahimyyildirim.github.io/advancedProgramming/CW5/cw5.html)
 
