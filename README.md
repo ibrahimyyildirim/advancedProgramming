@@ -1,10 +1,10 @@
 # Advanced Programming
 
-[HW3](https://ibrahimyyildirim.github.io/advancedProgramming/HW3/hw3.html)
+[HW3 - Animations](https://ibrahimyyildirim.github.io/advancedProgramming/HW3/hw3.html)
 
-[CW6](https://ibrahimyyildirim.github.io/advancedProgramming/CW6/timing.html)
+[CW6 - Map &Array Timing](https://ibrahimyyildirim.github.io/advancedProgramming/CW6/timing.html)
 
-[CW5](https://ibrahimyyildirim.github.io/advancedProgramming/CW5/cw5.html)
+[CW5 - Fetch - FileReader](https://ibrahimyyildirim.github.io/advancedProgramming/CW5/cw5.html)
 
 [HW2](https://ibrahimyyildirim.github.io/advancedProgramming/HW2/index.html)
 
