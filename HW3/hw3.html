@@ -45,7 +45,7 @@ p{
 <p id=clock></p>
 
 <p><b>#COMPLETE THE PUZZLE</b></p>    <p> 
-<font size="3">(4 parça halinde hatalı olan görsellerin üzerine tıklayarak tamamlayınız.)</font>
+<font size="3">(Hatalı olan görsellerin üzerine tıklayınız.)</font><
   
  <div class="row">
  <div class="column">
@@ -65,7 +65,7 @@ p{
 <p><b>#CAR DRIVER</b></p> 
    <button onClick="speed();">FAST </button>
    <button onClick="speed2();">SLOW</button><br><br>
-<img src="car3.png" id ="car"  width="265" height="105"><br><hr>
+<img src="car3.png" id ="car"  align="left" width="265" height="105"><br><hr>
 <p><b>#BOUNCING BALL</b></p>
 <img src="ball.png" onload ="this.animate(t1, t1Option)"  width="75" height="75"><br><br><br><br><br><br><br><br><br><br><br><hr>
 <h2 style="width:200px;" id="status"></h2>
@@ -123,9 +123,9 @@ const
   t1 = [ { transform: 'translateY(0px)' }, { transform: 'translateY(+200px)' } ],
   t1Option = { duration: 500,iterations: Infinity,direction: "alternate",easing: 'ease-in-out'},
   t2 = { transform: ["rotate(180deg)", "rotate(180deg)", "rotate(180deg)"] },
-  t4 = { fontSize: ["100%", "150%", "100%", "75%", "100%"] },
-  carFast = [{transform: 'translateX(0)'},{transform: 'translateX(500px)'}],
-  carSlow = [{transform: 'translateX(0)'},{transform: 'translateX(500px)'}];
+  t4 = { fontSize: ["60%", "175%", "100%", "75%", "100%"] },
+  carFast = [{transform: 'translateX(0)'},{transform: 'translateX(1100px)'}],
+  carSlow = [{transform: 'translateX(0)'},{transform: 'translateX(1100px)'}];
   title.innerText = document.title;
 
 </script>
