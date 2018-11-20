@@ -1,4 +1,7 @@
 # Advanced Programming
+
+[HW3](https://ibrahimyyildirim.github.io/advancedProgramming/HW3/HW3.html)
+
 [CW6](https://ibrahimyyildirim.github.io/advancedProgramming/CW6/timing.html)
 
 [CW5](https://ibrahimyyildirim.github.io/advancedProgramming/CW5/cw5.html)
