@@ -45,7 +45,8 @@ p{
 <p id=clock></p>
 
 <p><b>#COMPLETE THE PUZZLE</b></p>
-<p>
+<font size="3">(4 parça halinde hatalı olan görsellerin üzerine tıklayarak tamamlayınız.)</font>
+    <p>   
  <div class="row">
  <div class="column">
 <img src="cog4.png" id="cog4"class="row"onClick="this.animate(t2, 700000)"  width="150" height="150"> 
@@ -74,17 +75,36 @@ p{
 <script>
 "use strict";
 
-document.getElementById("cog1").addEventListener("click", puzzle);
-document.getElementById("cog2").addEventListener("click", puzzle);
-document.getElementById("cog3").addEventListener("click", puzzle);
-document.getElementById("cog4").addEventListener("click", puzzle);
+document.getElementById("cog1").addEventListener("click", puzzle1);
+document.getElementById("cog2").addEventListener("click", puzzle2);
+document.getElementById("cog3").addEventListener("click", puzzle3);
+document.getElementById("cog4").addEventListener("click", puzzle4);
 
-var sayac = 0;
+var sayac1= 0;
+var sayac2= 0;
+var sayac3= 0;
+var sayac4= 0;
+var sayacToplam = 0;
+
 let cikti ="";
-function puzzle(){
-    sayac++
-//console.log(sayac)
-if (sayac == 4) 
+
+function puzzle1(){
+   sayac1= 1;
+   textResult()
+}function puzzle2(){
+   sayac2= 1;
+   textResult()
+}function puzzle3(){
+   sayac3 = 1;
+   textResult()
+}function puzzle4(){
+   sayac4 = 1;
+   textResult()
+}
+
+function textResult() {
+sayacToplam = sayac1+sayac2+sayac3+sayac4;
+if (sayacToplam == 4) 
 cikti="COMPLETED !!!";
     out.innerHTML=cikti;
     out.animate(t4,7000);
