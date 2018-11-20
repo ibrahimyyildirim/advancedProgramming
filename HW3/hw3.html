@@ -97,12 +97,7 @@ car.animate(carFast,2000);
 function speed2(){
 car.animate(carSlow,5000);
 }
-var carDuration =10000;
-function changeDuration() {
-carDuration = document.getElementById("x").value;
- // console.log("duration: "+duration);
- 
-}
+
 
 const 
   t1 = [ { transform: 'translateY(0px)' }, { transform: 'translateY(+200px)' } ],
@@ -111,7 +106,6 @@ const
   t4 = { fontSize: ["100%", "150%", "100%", "75%", "100%"] },
   carFast = [{transform: 'translateX(0)'},{transform: 'translateX(500px)'}],
   carSlow = [{transform: 'translateX(0)'},{transform: 'translateX(500px)'}];
-  duration = { duration: carDuration};
   title.innerText = document.title;
 
 </script>
