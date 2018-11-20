@@ -1,6 +1,6 @@
 # Advanced Programming
 
-[HW3](https://ibrahimyyildirim.github.io/advancedProgramming/HW3/HW3.html)
+[HW3](https://ibrahimyyildirim.github.io/advancedProgramming/HW3/hw3.html)
 
 [CW6](https://ibrahimyyildirim.github.io/advancedProgramming/CW6/timing.html)
 
