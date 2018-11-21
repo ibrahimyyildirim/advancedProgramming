@@ -4,7 +4,16 @@
     <meta name="viewport" content="width=device-width">
     <link rel="manifest" href="manifest.json">
     <title>#CW 7</title>
-    <script>
+ <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker
+          .register('sw.js')
+          .then((reg) => { console.log('SW Registered', reg) })
+          .catch(console.log)
+      }
+  </script>
+	
+<script>
        
 class Course {
 constructor(course,time,date,room){
