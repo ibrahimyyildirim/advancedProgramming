@@ -11,5 +11,5 @@
 
 # HomeWorks
 [HW3 - Animations](https://ibrahimyyildirim.github.io/advancedProgramming/HW3/hw3.html)<br>
-[HW2 - Array Sample](https://ibrahimyyildirim.github.io/advancedProgramming/IbrahimYildirim_arrayDemo.html)<br>
+[HW2](https://ibrahimyyildirim.github.io/advancedProgramming/HW2/index.html)<br>
 [HW1](https://ibrahimyyildirim.github.io/advancedProgramming/HW1%20-%20Add%20Course.html)
