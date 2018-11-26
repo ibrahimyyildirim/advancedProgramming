@@ -1,0 +1,13 @@
+{
+  "name": "Ibrahim YILDIRIM CW7",
+  "start_url": "/advancedProgramming/index.html",
+  "display": "standalone",
+  "background_color": "black",
+  "icons": [
+    {
+      "src": "js.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
