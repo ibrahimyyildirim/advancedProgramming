@@ -1,9 +1,10 @@
 {
-  "name": "Ibrahim YILDIRIM CW7",
+  "name": "Ibrahim YILDIRIM - Repo",
   "start_url": "/advancedProgramming/index.html",
   "display": "standalone",
   "background_color": "black",
   "icons": [
+    
     {
       "src": "js.png",
       "sizes": "192x192",
