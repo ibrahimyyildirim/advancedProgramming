@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width">
     <link rel="manifest" href="manifest.json">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	
+<script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker
+          .register('sw.js')
+          .then((reg) => { console.log('SW Registered', reg) })
+          .catch(console.log)
+      }
+</script>
   <style>
 
 body {
@@ -59,17 +69,6 @@ body {
     text-align: center;
     text-shadow: 1px 1px 1px #fff;
 }
-  
-
-
-<script>
-      if ('serviceWorker' in navigator) {
-        navigator.serviceWorker
-          .register('sw.js')
-          .then((reg) => { console.log('SW Registered', reg) })
-          .catch(console.log)
-      }
-</script>
 
 </style>
 <div class="header" id="myHeader">
