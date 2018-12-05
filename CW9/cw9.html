@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>SVG and Canvas </title>
+
+  <style>
+    svg, canvas {
+        background: #CDD6D5;
+        font: 10px arial, sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+
+<hr />
+
+<h2>Using Canvas</h2>
+For color <input type="color"  id="color1" onchange="draw()" value="#a67779">
+for line size: <input type="number" style="height:18px;width:45px" id="line" value= "3"onchange="draw()" >
+for width: <input type="number" style="height:18px;width:45px" id="width" value= "50"onchange="draw()" step = "10">
+for height: <input type="number" style="height:18px;width:45px" id="height" value= "50"onchange="draw()"step = "10">
+<br><br><br>
+
+
+<canvas id=canvas width=350 height=350></canvas>
+<p>Canvas is an image drawn by JavaScript</p>
+<pre id=sample></pre>
+
+<hr />
+
+<p>Ref: <i>Eloquent JavaScript</i>,
+<a href="http://eloquentjavascript.net/17_canvas.html" 
+   target="ExternalDocument"> Chap 17</a>
+</p>
+
+<script>
+"use strict";
+
+
+function draw() {
+    cx.clearRect(0, 0, canvas.width, canvas.height);
+    cx.beginPath(); cx.lineWidth = document.getElementById("line").value;
+    cx.fillStyle = document.getElementById("color1").value;  cx.strokeStyle = "#233656";
+    cx.arc(document.getElementById("width").value, document.getElementById("height").value, 40, 0, 2*Math.PI);
+    cx.fill(); cx.stroke();
+    cx.fillStyle = "black"; 
+    //cx.fillText("arc",44,55);
+    
+  /*  cx.beginPath(); cx.lineWidth = 5;
+    cx.fillStyle = "black"; cx.strokeStyle = "red";
+    cx.rect(110,10,100,80);
+    cx.fill(); cx.stroke();
+    cx.fillStyle = "black"; */
+}
+
+   // sample.innerText = draw;
+    const cx = canvas.getContext("2d");
+    draw();
+
+    
+        
+</script>
+
+</body>
+</html>
+
