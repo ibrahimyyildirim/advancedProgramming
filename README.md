@@ -1,6 +1,6 @@
 # Advanced Programming
 
-# HomeWorks
+# Project
 [Project](https://ibrahimyyildirim.github.io/advancedProgramming/Project/index.html)<br>
 
 # ClassWorks
