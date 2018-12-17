@@ -7,224 +7,313 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
  <link rel="stylesheet" href="seat.css">
  <link rel="stylesheet" href="buyScreen.css">
+
 </head>
-<br>   
-<div align="center">  Filmler 
-    <select onchange="temizle()" required>
-      <option value="Theater 1">Goodfellas</option>
-      <option value="Theater 2">The Great Gatsby</option>
-      <option value="Theater 3">Predestination</option>
-      <option value="Theater 4">Inception</option>
-      <option value="Theater 5">Focus</option>
+<div  class="appBackground">
+<body onload="db.kontrol()"><br>   
+<div align="center"> <b> Filmler </b> 
+    <select onchange="temizle();db.kontrol();temizle2();" required="" id="movie1">
+    <option value="Goodfellas">Goodfellas</option>
+      <option value="The Great Gatsby">The Great Gatsby</option>
+      <option value="Predestination">Predestination</option>
+      <option value="Inception">Inception</option>
+      <option value="Focus">Focus</option>
     </select>
-    &emsp;
-    Tarih
-    <input  onchange="temizle()" type="date" name="date" id="date" min="today" required />
-    &emsp;
-    Seans
-    <select  onchange="temizle()" required>
-      <option value="Theater 1">11:00</option>
-      <option value="Theater 1">13:45</option>
-      <option value="Theater 2">16:30</option>
-      <option value="Theater 3">19:15</option>
+     
+      <b> Tarih</b>
+    <input onchange="temizle();db.kontrol();temizle2();" type="date" name="date" id="date" min="2018-12-15"max="2018-12-22" required="">
+     
+    <b>Seans</b>
+    <select onchange="temizle();db.kontrol();temizle2();" required="" id="session1">
+      <option value="11:00">11:00</option>
+      <option value="13:45">13:45</option>
+      <option value="16:30">16:30</option>
+      <option value="19:15">19:15</option>
     </select>
 </div>
 <div class="seatSelection col-lg-12">
         <br>
-    <p><img src="screen.png"id="cog2"  width="583" height="56" ></p>
+    <p><img src="screen.png" id="cog2" width="583" height="56"></p>
 
     <div class="seatsChart col-lg-6">
         <div class="seatRow">
             <div class="seatRowNumber">
                 A
             </div>
-            <div id="A_1" role="checkbox" class=" seatNumber ">1</div>
-            <div id="A_2" role="checkbox" class=" seatNumber ">2</div>
-            <div id="A_3" role="checkbox" class=" seatNumber ">3</div>
-            <div id="A_4" role="checkbox" class=" seatNumber ">4</div>
-            <div id="A_5" role="checkbox" class=" seatNumber ">5</div>
-            <div id="A_6" role="checkbox" class=" seatNumber ">6</div>
-            <div id="A_7" role="checkbox" class=" seatNumber ">7</div>
-            <div id="A_8" role="checkbox" class=" seatNumber ">8</div>
-            <div id="A_9" role="checkbox" class=" seatNumber ">9</div>
-            <div id="A_10" role="checkbox" class=" seatNumber ">10</div>
-            <div id="A_11" role="checkbox" class=" seatNumber ">11</div>
-            <div id="A_12" role="checkbox" class=" seatNumber ">12</div>
-
-           
-  
+            <div id="A-1" role="checkbox" class=" seatNumber ">1</div>
+            <div id="A-2" role="checkbox" class=" seatNumber ">2</div>
+            <div id="A-3" role="checkbox" class=" seatNumber ">3</div>
+            <div id="A-4" role="checkbox" class=" seatNumber ">4</div>
+            <div id="A-5" role="checkbox" class=" seatNumber ">5</div>
+            <div id="A-6" role="checkbox" class=" seatNumber ">6</div>
+            <div id="A-7" role="checkbox" class=" seatNumber ">7</div>
+            <div id="A-8" role="checkbox" class=" seatNumber ">8</div>
+            <div id="A-9" role="checkbox" class=" seatNumber ">9</div>
+            <div id="A-10" role="checkbox" class=" seatNumber ">10</div>
+            <div id="A-11" role="checkbox" class=" seatNumber ">11</div>
+            <div id="A-12" role="checkbox" class=" seatNumber ">12</div>
         </div>
         <div class="seatRow">
             <div class="seatRowNumber">
                 B
             </div>
-            <div id="B_1" role="checkbox" class=" seatNumber ">1</div>
-            <div id="B_2" role="checkbox" class=" seatNumber ">2</div>
-            <div id="B_3" role="checkbox" class=" seatNumber ">3</div>
-            <div id="B_4" role="checkbox" class=" seatNumber ">4</div>
-            <div id="B_5" role="checkbox" class=" seatNumber ">5</div>
-            <div id="B_6" role="checkbox" class=" seatNumber ">6</div>
-            <div id="B_7" role="checkbox" class=" seatNumber ">7</div>
-            <div id="B_8" role="checkbox" class=" seatNumber ">8</div>
-            <div id="B_9" role="checkbox" class=" seatNumber  ">9</div>
-            <div id="B_10" role="checkbox" class=" seatNumber ">10</div>
-            <div id="B_11" role="checkbox" class=" seatNumber ">11</div>
-            <div id="B_12" role="checkbox" class=" seatNumber ">12</div>
-            <div id="B_13" role="checkbox" class=" seatNumber  ">13</div>
-            <div id="B_14" role="checkbox" class=" seatNumber ">14</div>
+            <div id="B-1" role="checkbox" class=" seatNumber ">1</div>
+            <div id="B-2" role="checkbox" class=" seatNumber ">2</div>
+            <div id="B-3" role="checkbox" class=" seatNumber ">3</div>
+            <div id="B-4" role="checkbox" class=" seatNumber ">4</div>
+            <div id="B-5" role="checkbox" class=" seatNumber ">5</div>
+            <div id="B-6" role="checkbox" class=" seatNumber ">6</div>
+            <div id="B-7" role="checkbox" class=" seatNumber ">7</div>
+            <div id="B-8" role="checkbox" class=" seatNumber ">8</div>
+            <div id="B-9" role="checkbox" class=" seatNumber  ">9</div>
+            <div id="B-10" role="checkbox" class=" seatNumber ">10</div>
+            <div id="B-11" role="checkbox" class=" seatNumber ">11</div>
+            <div id="B-12" role="checkbox" class=" seatNumber ">12</div>
+            <div id="B-13" role="checkbox" class=" seatNumber  ">13</div>
+            <div id="B-14" role="checkbox" class=" seatNumber ">14</div>
         </div>
         <div class="seatRow">
             <div class="seatRowNumber">
                 C
             </div>
-            <div id="C_1" role="checkbox" class=" seatNumber ">1</div>
-            <div id="C_2" role="checkbox" class=" seatNumber ">2</div>
-            <div id="C_3" role="checkbox" class=" seatNumber ">3</div>
-            <div id="C_4" role="checkbox" class=" seatNumber ">4</div>
-            <div id="C_5" role="checkbox" class=" seatNumber ">5</div>
-            <div id="C_6" role="checkbox" class=" seatNumber ">6</div>
-            <div id="C_7" role="checkbox" class=" seatNumber ">7</div>
-            <div id="C_8" role="checkbox" class=" seatNumber ">8</div>
-            <div id="C_9" role="checkbox" class=" seatNumber ">9</div>
-            <div id="C_10" role="checkbox" class=" seatNumber ">10</div>
-            <div id="C_11" role="checkbox" class=" seatNumber ">11</div>
-            <div id="C_12" role="checkbox" class=" seatNumber ">12</div>
-            <div id="C_13" role="checkbox" class=" seatNumber ">13</div>
-            <div id="C_14" role="checkbox" class=" seatNumber ">14</div>
+            <div id="C-1" role="checkbox" class=" seatNumber ">1</div>
+            <div id="C-2" role="checkbox" class=" seatNumber ">2</div>
+            <div id="C-3" role="checkbox" class=" seatNumber ">3</div>
+            <div id="C-4" role="checkbox" class=" seatNumber ">4</div>
+            <div id="C-5" role="checkbox" class=" seatNumber ">5</div>
+            <div id="C-6" role="checkbox" class=" seatNumber ">6</div>
+            <div id="C-7" role="checkbox" class=" seatNumber ">7</div>
+            <div id="C-8" role="checkbox" class=" seatNumber ">8</div>
+            <div id="C-9" role="checkbox" class=" seatNumber ">9</div>
+            <div id="C-10" role="checkbox" class=" seatNumber ">10</div>
+            <div id="C-11" role="checkbox" class=" seatNumber ">11</div>
+            <div id="C-12" role="checkbox" class=" seatNumber ">12</div>
+            <div id="C-13" role="checkbox" class=" seatNumber ">13</div>
+            <div id="C-14" role="checkbox" class=" seatNumber ">14</div>
   
         </div>
         <div class="seatRow">
             <div class="seatRowNumber">
                 D
             </div>
-            <div id="D_1" role="checkbox" class=" seatNumber ">1</div>
-            <div id="D_2" role="checkbox" class=" seatNumber ">2</div>
-            <div id="D_3" role="checkbox" class=" seatNumber ">3</div>
-            <div id="D_4" role="checkbox" class=" seatNumber ">4</div>
-            <div id="D_5" role="checkbox" class=" seatNumber ">5</div>
-            <div id="D_6" role="checkbox" class=" seatNumber ">6</div>
-            <div id="D_7" role="checkbox" class=" seatNumber ">7</div>
-            <div id="D_8" role="checkbox" class=" seatNumber ">8</div>
-            <div id="D_9" role="checkbox" class=" seatNumber ">9</div>
-            <div id="D_10" role="checkbox" class=" seatNumber ">10</div>
-            <div id="D_11" role="checkbox" class=" seatNumber ">11</div>
-            <div id="D_12" role="checkbox" class=" seatNumber ">12</div>   &emsp;&emsp;
+            <div id="D-1" role="checkbox" class=" seatNumber ">1</div>
+            <div id="D-2" role="checkbox" class=" seatNumber ">2</div>
+            <div id="D-3" role="checkbox" class=" seatNumber ">3</div>
+            <div id="D-4" role="checkbox" class=" seatNumber ">4</div>
+            <div id="D-5" role="checkbox" class=" seatNumber ">5</div>
+            <div id="D-6" role="checkbox" class=" seatNumber ">6</div>
+            <div id="D-7" role="checkbox" class=" seatNumber ">7</div>
+            <div id="D-8" role="checkbox" class=" seatNumber ">8</div>
+            <div id="D-9" role="checkbox" class=" seatNumber ">9</div>
+            <div id="D-10" role="checkbox" class=" seatNumber ">10</div>
+            <div id="D-11" role="checkbox" class=" seatNumber ">11</div>
+            <div id="D-12" role="checkbox" class=" seatNumber ">12</div>     
         </div>
         <div class="seatRow">
             <div class="seatRowNumber">
                 E
             </div>
-            <div id="E_1" role="checkbox" class=" seatNumber ">1</div>
-            <div id="E_2" role="checkbox" class=" seatNumber ">2</div>
-            <div id="E_3" role="checkbox" class=" seatNumber ">3</div>
-            <div id="E_4" role="checkbox" class=" seatNumber ">4</div>
-            <div id="E_5" role="checkbox" class=" seatNumber ">5</div>
-            <div id="E_6" role="checkbox" class=" seatNumber  ">6</div>
-            <div id="E_7" role="checkbox" class=" seatNumber ">7</div>
-            <div id="E_8" role="checkbox" class=" seatNumber ">8</div>
-            <div id="E_9" role="checkbox" class=" seatNumber ">9</div>
-            <div id="E_10" role="checkbox" class=" seatNumber ">10</div>
-            <div id="E_11" role="checkbox" class=" seatNumber ">11</div>
-            <div id="E_12" role="checkbox" class=" seatNumber ">12</div> 
-            &emsp; <img src="exit.png"id="cog2"  width="14"  height="40">
+            <div id="E-1" role="checkbox" class=" seatNumber ">1</div>
+            <div id="E-2" role="checkbox" class=" seatNumber ">2</div>
+            <div id="E-3" role="checkbox" class=" seatNumber ">3</div>
+            <div id="E-4" role="checkbox" class=" seatNumber ">4</div>
+            <div id="E-5" role="checkbox" class=" seatNumber ">5</div>
+            <div id="E-6" role="checkbox" class=" seatNumber  ">6</div>
+            <div id="E-7" role="checkbox" class=" seatNumber ">7</div>
+            <div id="E-8" role="checkbox" class=" seatNumber ">8</div>
+            <div id="E-9" role="checkbox" class=" seatNumber ">9</div>
+            <div id="E-10" role="checkbox" class=" seatNumber ">10</div>
+            <div id="E-11" role="checkbox" class=" seatNumber ">11</div>
+            <div id="E-12" role="checkbox" class=" seatNumber ">12</div> 
+              <img src="exit.png" id="cog2" width="14" height="40">
         </div>
     <div class="seatRow">
             <div class="seatRowNumber">
                 F
             </div>
-            <div id="F_1" role="checkbox" class=" seatNumber ">1</div>
-            <div id="F_2" role="checkbox" class=" seatNumber ">2</div>
-            <div id="F_3" role="checkbox" class=" seatNumber ">3</div>
-            <div id="F_4" role="checkbox" class=" seatNumber ">4</div>
-            <div id="F_5" role="checkbox" class=" seatNumber ">5</div>
-            <div id="F_6" role="checkbox" class=" seatNumber ">6</div>
-            <div id="F_7" role="checkbox" class=" seatNumber ">7</div>
-            <div id="F_8" role="checkbox" class=" seatNumber ">8</div>
-            <div id="F_9" role="checkbox" class=" seatNumber ">9</div>
-            <div id="F_10" role="checkbox" class=" seatNumber ">10</div>
-            <div id="F_11" role="checkbox" class=" seatNumber ">11</div>
-            <div id="F_12" role="checkbox" class=" seatNumber ">12</div>
-            <div id="F_13" role="checkbox" class=" seatNumber ">13</div>
-            <div id="F_14" role="checkbox" class=" seatNumber ">14</div>
+            <div id="F-1" role="checkbox" class=" seatNumber ">1</div>
+            <div id="F-2" role="checkbox" class=" seatNumber ">2</div>
+            <div id="F-3" role="checkbox" class=" seatNumber ">3</div>
+            <div id="F-4" role="checkbox" class=" seatNumber ">4</div>
+            <div id="F-5" role="checkbox" class=" seatNumber ">5</div>
+            <div id="F-6" role="checkbox" class=" seatNumber ">6</div>
+            <div id="F-7" role="checkbox" class=" seatNumber ">7</div>
+            <div id="F-8" role="checkbox" class=" seatNumber ">8</div>
+            <div id="F-9" role="checkbox" class=" seatNumber ">9</div>
+            <div id="F-10" role="checkbox" class=" seatNumber ">10</div>
+            <div id="F-11" role="checkbox" class=" seatNumber ">11</div>
+            <div id="F-12" role="checkbox" class=" seatNumber ">12</div>
+            <div id="F-13" role="checkbox" class=" seatNumber ">13</div>
+            <div id="F-14" role="checkbox" class=" seatNumber ">14</div>
         </div>
     <div class="seatRow">
             <div class="seatRowNumber">
                 G
             </div>
-            <div id="G_1" role="checkbox" class=" seatNumber ">1</div>
-            <div id="G_2" role="checkbox" class=" seatNumber ">2</div>
-            <div id="G_3" role="checkbox" class=" seatNumber ">3</div>
-            <div id="G_4" role="checkbox" class=" seatNumber ">4</div>
-            <div id="G_5" role="checkbox" class=" seatNumber ">5</div>
-            <div id="G_6" role="checkbox" class=" seatNumber ">6</div>
-            <div id="G_7" role="checkbox" class=" seatNumber ">7</div>
-            <div id="G_8" role="checkbox" class=" seatNumber ">8</div>
-            <div id="G_9" role="checkbox" class=" seatNumber ">9</div>
-            <div id="G_10" role="checkbox" class=" seatNumber ">10</div>
-            <div id="G_11" role="checkbox" class=" seatNumber ">11</div>
-            <div id="G_12" role="checkbox" class=" seatNumber ">12</div>
-            <div id="G_13" role="checkbox" class=" seatNumber ">13</div>
-            <div id="G_14" role="checkbox" class=" seatNumber ">14</div>
+            <div id="G-1" role="checkbox" class=" seatNumber ">1</div>
+            <div id="G-2" role="checkbox" class=" seatNumber ">2</div>
+            <div id="G-3" role="checkbox" class=" seatNumber ">3</div>
+            <div id="G-4" role="checkbox" class=" seatNumber ">4</div>
+            <div id="G-5" role="checkbox" class=" seatNumber ">5</div>
+            <div id="G-6" role="checkbox" class=" seatNumber ">6</div>
+            <div id="G-7" role="checkbox" class=" seatNumber ">7</div>
+            <div id="G-8" role="checkbox" class=" seatNumber ">8</div>
+            <div id="G-9" role="checkbox" class=" seatNumber ">9</div>
+            <div id="G-10" role="checkbox" class=" seatNumber ">10</div>
+            <div id="G-11" role="checkbox" class=" seatNumber ">11</div>
+            <div id="G-12" role="checkbox" class=" seatNumber ">12</div>
+            <div id="G-13" role="checkbox" class=" seatNumber ">13</div>
+            <div id="G-14" role="checkbox" class=" seatNumber ">14</div>
         </div>
     <div class="seatRow">
             <div class="seatRowNumber">
                 H
             </div>
-            <div id="H_1" role="checkbox" class=" seatNumber ">1</div>
-            <div id="H_2" role="checkbox" class=" seatNumber ">2</div>
-            <div id="H_3" role="checkbox" class=" seatNumber ">3</div>
-            <div id="H_4" role="checkbox" class=" seatNumber ">4</div>
-            <div id="H_5" role="checkbox" class=" seatNumber ">5</div>
-            <div id="H_6" role="checkbox" class=" seatNumber ">6</div>
-            <div id="H_7" role="checkbox" class=" seatNumber ">7</div>
-            <div id="H_8" role="checkbox" class=" seatNumber ">8</div>
-            <div id="H_9" role="checkbox" class=" seatNumber ">9</div>
-            <div id="H_10" role="checkbox" class=" seatNumber ">10</div>
-            <div id="H_11" role="checkbox" class=" seatNumber ">11</div>
-            <div id="H_12" role="checkbox" class=" seatNumber ">12</div>
-            <div id="H_13" role="checkbox" class=" seatNumber ">13</div>
-            <div id="H_14" role="checkbox" class=" seatNumber ">14</div>
+            <div id="H-1" role="checkbox" class=" seatNumber ">1</div>
+            <div id="H-2" role="checkbox" class=" seatNumber ">2</div>
+            <div id="H-3" role="checkbox" class=" seatNumber ">3</div>
+            <div id="H-4" role="checkbox" class=" seatNumber ">4</div>
+            <div id="H-5" role="checkbox" class=" seatNumber ">5</div>
+            <div id="H-6" role="checkbox" class=" seatNumber ">6</div>
+            <div id="H-7" role="checkbox" class=" seatNumber ">7</div>
+            <div id="H-8" role="checkbox" class=" seatNumber ">8</div>
+            <div id="H-9" role="checkbox" class=" seatNumber ">9</div>
+            <div id="H-10" role="checkbox" class=" seatNumber ">10</div>
+            <div id="H-11" role="checkbox" class=" seatNumber ">11</div>
+            <div id="H-12" role="checkbox" class=" seatNumber ">12</div>
+            <div id="H-13" role="checkbox" class=" seatNumber ">13</div>
+            <div id="H-14" role="checkbox" class=" seatNumber ">14</div>
         </div>
     </div>
-    <br> <br> 
+    <br> 
+<b> 
 
-        <div id="container">
+       <div id="container">
+
             <div id="form">
+<p id="perTicketPrice">Bilet adet fiyat: 25.00 ₺ </p>
               <form id="book_tickets">
                 <fieldset>
-                  <legend><b>Bilet Satın Al</b></legend>
                   <p>
                         <label for="name">İsim:</label>
-                        <input type="name" name="name" id="name" required />
+                        <input type="name" name="name" id="name" value=""  required>
                       </p>
           
                   <p>
                     <label for="email">E-mail:</label>
-                    <input type="email" name="email" id="email" required />
+                    <input type="email" name="email" id="email" value=""required>
                   </p>
           
+                 <p>
+                <label for="tickets_quantity">Koltuklar:</label>   
+              <p id="koltukNumara" > </p>
+              <script> 
+                
+                var list =new Array;
+                [].forEach.call(document.querySelectorAll(".seatNumber"), function(el) {
+                
+                var element = document.getElementById(el.id);
+                el.addEventListener("click", function() {
+                var str = document.getElementById('koltukNumara').innerHTML;
+                
+                if (!element.classList.contains("seatUnavailable")) { 
+                str=element.id;
+                    if(!element.classList.contains("seatSelected")){
+                    list.push(str);
+                    }
+                    else{
+                    var index = list.indexOf(str);
+                    if (index > -1) {
+                    list.splice(index, 1);
+                            }
+                    }
+                }
+
+                    document.getElementById('koltukNumara').innerHTML=list;
+                            });
+                        
+                        });
+                </script>
+                
                   <p>
-                    <label for="tickets_quantity">Koltuklar:</label>
-                    
-                  </p>
-          
-                  <p>
-                    <label>Toplam Tutar:</label>
-                    <span id="total_price"> ₺</span>
-                  </p>
+                    <label>Toplam Tutar: </label>          
+                    </p>
+              <p id="koltukFiyat" ></p>  <script> 
+                var list1 = new Array;
+                [].forEach.call(document.querySelectorAll(".seatNumber"), function(el) {
+                var element = document.getElementById(el.id);
+                el.addEventListener("click", function() {
+                var str = document.getElementById('koltukFiyat').innerHTML;
+                if (!element.classList.contains("seatUnavailable")) { 
+                str=element.id;
+                    if(!element.classList.contains("seatSelected")){
+                    list1.push(str);
+                    }
+                    else{
+                    var index = list1.indexOf(str);
+                    if (index > -1) {
+                    list1.splice(index, 1);
+                            }
+                    }
+                }
+                var b = list1.length;
+                    document.getElementById('koltukFiyat').innerHTML=(b*25)+"₺";
+                            });
+                        
+                        });
+                </script>
                   <div id="submit_wrapper">
-                        <button onclick="temizle()">Temizle</button>
-                        <button onclick="satinAl()">Satın al</button>
+                     <button class="button"onclick="temizle()" style="vertical-align:middle"><span>Seçimleri Kaldır </span></button>
+                        <button  class="button"value="Satın Al" onclick="kontrolSat();db.kontrol();makeTable();" style="vertical-align:middle"><span>Satın Al</span></button>
+                           <button  id="myBtn" class="button"onclick="makeTable()" style="vertical-align:middle"><span>Bilet Görüntüle </span></button>
+                      <!-- <a href="#"  onclick="kontrolSat();db.kontrol();makeTable() "class="btn green">Satın Al </a>-->  
+                         
                   </div>
                 </fieldset>
               </form>
-              <p id="perTicketPrice">Bilet adet fiyat: 25.00 ₺ </p>
-              </p>
+              
           </div>
-          
+         
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p><head>Bilet Çıktı Ekranı</head><table id="tabloBilet"></table></p>
+  </div>
+</div>
   
   <script src="seat.js"></script>
   <script src="currentDate.js"> </script>
+  <script> db = new database(); </script>
+<script> 
+    // Popup Al
+var modal = document.getElementById('myModal');
 
+// Kipi açan düğmeyi al
+var btn = document.getElementById("myBtn");
+
+// Kipi kapatan <span> öğesini edinin
+var span = document.getElementsByClassName("close")[0];
+
+// Kullanıcı düğmeyi tıklattığında
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// Kullanıcı <span> (x) düğmesini tıkladığında, popup
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// Kullanıcı modelden başka herhangi bir yeri tıklattıysa, onu kapatın.
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+w = window.innerWidth;
+y = window.innerHeight;
+
+console.log("genişlik:"+w+"yükseklik:"+y)</script>
 </body>
 </html>

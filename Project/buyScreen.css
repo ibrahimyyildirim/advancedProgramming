@@ -3,19 +3,20 @@ html{
 }
 
 body{
-  font-family: "Arial", Helvetica, sans-serif;
+  font-family: Calibri, Helvetica, sans-serif;
   position:  relative;
+  font-size: 16px;
 }
 
 #container{
   text-align: center;
   position: relative;
-  height: 100%;
+  max-height: 800px;
 }
 
 #movies_booked, #form{
   display: inline-block;
-  width: 40%;
+  width: 70%;
   height: 100%;
   margin: 0 auto;
   vertical-align:text-top;
@@ -24,16 +25,18 @@ body{
 fieldset, #movies_booked{
   border:1px solid rgb(2, 15, 26);
   border-radius:8px;
-  box-shadow:5px 5px 15px #192F40;
+  box-shadow:5px 5px 5px rgb(70, 0, 0);
   background-color:white;
+
 }
 
 legend, #disount_title{
-  color: rgb(15, 6, 66);
+  color: #6A0000;
   font-size: 100%;
   text-align: center;
   background-color: white;
-  text-shadow:2px 2px 20px #192F40;
+  /*text-shadow:2px 2px 20px #6A0000;*/
+  
 }
 
 p{
@@ -82,3 +85,90 @@ p span, li{
 #dateNote{
   font-size: 9px;
 }
+#koltukNumara{
+  margin-top: -15px;
+}
+#koltukFiyat{
+  margin-top: -15px;
+}
+
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #6A0000;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 13px;
+  padding: 12px;
+  width: 140px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(0,0,0,0.4); 
+}
+/* İçerik / Kutu */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; 
+  padding: 20px;
+  border: 1px solid #888;
+  width: 55%; 
+}
+/* Kapat Düğmesi */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+table { border-collapse: collapse; }
+th { color: rgb(1, 1, 2); padding: 5px 5px; }
+td { 
+    border: 3px solid rgb(0, 0, 0); 
+    padding: 5px 5px; 
+    text-align: center; 
+ }
