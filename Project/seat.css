@@ -1,13 +1,4 @@
-.appBackground {
-   
-    background-image: url("cinema.png");
-	width: 100%;
-	height: 190vh;
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: cover;
-	background-attachment: fixed;
-  }
+
 .seatSelection {
   text-align: center;
   padding: 5px;
