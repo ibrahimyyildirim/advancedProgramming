@@ -1,27 +1,31 @@
-
+.container {
+    
+    padding-right: auto;
+    padding-left: auto;
+    margin-right: auto;
+    margin-left: auto;
+}
 .seatSelection {
   text-align: center;
-  padding: 5px;
-  margin: 15px;}
+  padding: 1%;
+  margin: 3%;}
 
 .seatsReceipt {text-align: center;}
 
 .seatNumber {
 	display: inline;
-	padding: 10px;
+	padding: 0.7%;
 	background-color: #267082;
 	color: #FFF;
-	border-radius: 5px;
+	border-radius: 18%;
 	cursor: default;
-	height: 25px;
-	width:  25px;
-	line-height: 25px;
+	line-height: 25%;
 	text-align: center;
 	cursor: pointer;
  }
 
 .seatRow {
-	padding: 10px;
+	padding: 1%;
 }
 
 .seatSelected {

@@ -45,7 +45,7 @@ function secimleriKaldir() {
   
   }
   
-let a =new Array;
+let a =new Array;       //satılan bilet array'i
 function satinAl() {
   console.log("tiklandi");
 [].forEach.call(document.querySelectorAll(".seatNumber"), function(el2) {
@@ -145,14 +145,19 @@ sat(){
     const dynamicData = new ticket(c,e,d,f,g,h);
     let dynamicKey= dynamicData.name+" "+dynamicData.date+" "+dynamicData.session+" "+dynamicData.seat;
     db.tickets.set(dynamicKey,dynamicData)
-    let dynamicBilet= "Sn. "+dynamicData.customer+" "+dynamicData.date+" tarihli '"+dynamicData.name+"' filmi için " 
-    +dynamicData.session+" seansına biletiniz alınmıştır. Koltuk No: "+dynamicData.seat;
+  
+    let dynamicBilet= "Ad Soyad &emsp;: "+dynamicData.customer
+    +"<br>Tarih&emsp;&emsp;&emsp;: "+dynamicData.date
+    +"<br>Film    &emsp;&emsp;&emsp;: "+dynamicData.name
+    +"<br>Seans&emsp;&emsp;&emsp;: "+dynamicData.session
+    +"<br>Koltuk No &emsp;: "+dynamicData.seat;
     a.push(dynamicBilet);
      //console.log(a)
     //console.log(dynamicKey)
 
           }
       });
+      alert("Biletiniz başarıyla alınmıştır. Bilet Çıktı butonuna basarak bilet çıktısına ulaşabilirsiniz.");
     }
 
 }

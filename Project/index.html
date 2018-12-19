@@ -9,8 +9,9 @@
   <link rel="stylesheet" href="buton.css">
  <link rel="stylesheet" href="formScreen.css">
 </head>
-<div>
-<body onload="db.kontrol();satilanBilet();"><br>   
+<body onload="db.kontrol();satilanBilet();">
+    <br>   
+    <div class="container">
 <div align="center"> <b> Filmler </b> 
     <select onchange="temizle();db.kontrol();temizle2();satilanBilet();" required="" id="movie1">
     <option value="Goodfellas">Goodfellas</option>
@@ -32,7 +33,7 @@
     </select>
 </div>
 <div class="seatSelection col-lg-12">
-    <p><img src="screen.png" id="cog2" width="583" height="56"></p>
+    <p><img src="screen.png" id="cog2" align="center"></p>
     <div class="seatsChart col-lg-6">
         <div class="seatRow">
             <div class="seatRowNumber">
@@ -183,20 +184,21 @@
             <div id="H-14" role="checkbox" class=" seatNumber ">14</div>
         </div>
     </div>
-</div>
+
 <b> 
-     <div class="form-style-5">
+</div>
 <div class="form-style-5">
                      
 <form id="form" action="javascript:kontrolSat();db.kontrol();makeTable();temizle2();satilanBilet();">
 <fieldset>
 <legend><span class="number">►</span> Bilet Bilgileri</legend>
-<input type="text" id="name" value="" placeholder="İsim Soyisim *">
+<input type="text" id="name" value="" placeholder="Ad Soyad *">
 <input type="email" id="email" value="" placeholder="E-mail *">
  <legend><span class="number">✓</span> Seçili Koltuklar</legend><p id="koltukNumara" > - </p>
  <legend><span class="number">₺</span> Toplam Tutar</legend><p id="koltukFiyat" > - ₺ </p>
 </fieldset>
 <p >Bilet adet fiyat: 25.00 ₺ </p>
+
 <input type="submit" value="Satın Al" />
 </form>
 
@@ -204,16 +206,20 @@
     <p id="koltukNumara" > </p>
     <script src="koltukSayac.js"></script>
     <script src="biletTutar.js"></script>
-
+    <div align="center">
+    <button  id="myBtn" class="button"onclick="makeTable()" style="vertical-align:middle"><span>Bilet Çıktısı</span></button>
   <button class="button"onclick="secimleriKaldir();temizle2();" style="vertical-align:middle"><span>Seçimleri Kaldır</span></button>
-  <button  id="myBtn" class="button"onclick="makeTable()" style="vertical-align:middle"><span>Bilet Çıktısı</span></button>
   <button  id="myBtn2" class="button"onclick="satilanBilet();" style="vertical-align:middle"><span>Salon Bilgileri</span></button>
 </div>
+</div>
+
+
+
 <div id="myModal" class="modal">
   <div class="modal-content">
     <span class="close">&times;</span>
     <p>
-    <head>Bilet Çıktı Ekranı</head>
+        <div align="center"><head>Bilet Çıktı Ekranı</head></div>
     <table id="tabloBilet"> </table>
     </p>
   </div>
@@ -226,6 +232,7 @@
     </p>
   </div>
 </div>
+
   <script src="seat.js"></script>
   <script src="currentDate.js"> </script>
   <script src="pop_up.js"></script>
