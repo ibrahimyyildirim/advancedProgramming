@@ -157,13 +157,13 @@ sat(){
 
           }
       });
-      alert("Biletiniz başarıyla alınmıştır. Bilet Çıktı butonuna basarak bilet çıktısına ulaşabilirsiniz.");
+      alert("Biletiniz başarıyla alınmıştır. 'Bilet Çıktısı' butonuna basarak bilet çıktısına ulaşabilirsiniz.");
     }
 
 }
 function temizle2(){
-  document.getElementById("koltukNumara").innerHTML="";
-  document.getElementById("koltukFiyat").innerHTML="";
+  document.getElementById("koltukNumara").innerHTML="-";
+  document.getElementById("koltukFiyat").innerHTML="-₺";
   document.getElementById("email").innerHTML='';
 
   list1= [];
@@ -174,16 +174,19 @@ function kontrolSat(){
   var Kemail=document.getElementById("email").value;
   if(Kname==""){
     alert("İsim alanı boş olamaz.")
+    temizle();
     }
   else if(list.length==0){
   alert("Koltuk seçimi yapılmadı.")
+  temizle();
   }else if(Kemail==""){
   alert("Mail alanı boş olamaz.")
+  temizle();
   }
   else {
     db.sat();  
-    document.getElementById("name").innerHTML='';
-    document.getElementById("email").innerHTML='';
+    document.getElementById("name").value='';
+    document.getElementById("email").value='';
     temizle2();
    }
 }

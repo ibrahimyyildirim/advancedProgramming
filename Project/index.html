@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="buton.css">
  <link rel="stylesheet" href="formScreen.css">
 </head>
-<body onload="db.kontrol();satilanBilet();">
+<body onload="db.kontrol();satilanBilet(); openMessage();">
     <br>   
     <div class="container">
 <div align="center"> <b> Filmler </b> 
@@ -33,7 +33,9 @@
     </select>
 </div>
 <div class="seatSelection col-lg-12">
-   <!-- <p><img src="screen.png" id="cog2" align="center"></p> -->
+    
+   <!-- <p><img src="screen.png" id="cog2" align="center"></p>-->
+   <b><p > P E R D E </p></b>
     <div class="seatsChart col-lg-6">
         <div class="seatRow">
             <div class="seatRowNumber">
@@ -232,6 +234,16 @@
     </p>
   </div>
 </div>
+<hr />
+
+<p>Ref:
+<a href="https://codepen.io/hectorfeliz/pen/QbvXLo" 
+ >  Seats</a>
+</p>
+<p>Ref2:
+    <a href="https://www.sanwebe.com/2014/08/css-html-forms-designs" 
+     >  Form Screen</a>
+    </p>
 
   <script src="seat.js"></script>
   <script src="currentDate.js"> </script>
@@ -243,9 +255,16 @@
 
 <script> 
 
-w = window.innerWidth;
+function openMessage(){
+    
+x = window.innerWidth;
 y = window.innerHeight;
-console.log("genişlik:"+w+"yükseklik:"+y)
+    if(y>x){
+alert("Mobil cihazlar için dikey kullanım uygun değildir, lütfen ekranınızı yatay olarak kullanınız.")
+}
+console.log("genişlik:"+x+"yükseklik:"+y)
+}
+
 
 </script>
 </body>
