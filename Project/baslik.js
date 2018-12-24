@@ -4,7 +4,7 @@
 	var cvs,ctx;
 	var nodes = 10;
 	var waves = [];
-	var waveHeight = 40;
+	var waveHeight = 20;
 	var colours = ["#63130E","#63130E","#FFB936"];
 	
   // Initiator function
