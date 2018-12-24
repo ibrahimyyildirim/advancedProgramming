@@ -14,12 +14,12 @@
       
     }
     
-    else console.log("buraya kayıt atanamaz")
+    else alert("Bu koltuğa bilet alamazsınız.")
     
     });
 });
 
-function temizle() {
+function temizle() {                                                       // tarih-film-seans değiştiğinde koltukları sıfırlar             
 [].forEach.call(document.querySelectorAll(".seatNumber"), function(el2) {
   var element2 = document.getElementById(el2.id);
   if (element2.classList.contains("seatUnavailable") || element2.classList.contains("seatSelected"))
@@ -31,6 +31,17 @@ function temizle() {
     });
 
 }
+
+function allSeatUnav() {                                                    // seans kontrolünde koltukların seçilmesini engeller
+  [].forEach.call(document.querySelectorAll(".seatNumber"), function(el2) {
+    var element2 = document.getElementById(el2.id);
+
+    element2.classList.add("seatUnavailable");
+
+        
+      });
+  
+  }
 
 function secimleriKaldir() {
   [].forEach.call(document.querySelectorAll(".seatNumber"), function(el2) {
@@ -45,7 +56,7 @@ function secimleriKaldir() {
   
   }
   
-let a =new Array;       //satılan bilet array'i
+let a =new Array;                                                  //satılan bilet array'i
 function satinAl() {
   console.log("tiklandi");
 [].forEach.call(document.querySelectorAll(".seatNumber"), function(el2) {
@@ -58,15 +69,8 @@ function satinAl() {
   });
 }
 
-function griYap(asd) {
-  
-[].forEach.call(document.querySelectorAll(".seatNumber"), function(asd) {
-  var element2 = document.getElementById(asd.id);
-  element2.classList.add("seatUnavailable");
-  });
-}
 
-class ticket{
+class ticket{                                           // ticket sınıfı  
   constructor(name,date,session,seat,customer,mail){
     this.name=name
     this.date=date
@@ -77,21 +81,21 @@ class ticket{
   }
 }
 
-class database{
-  constructor(){
+class database{                                                   
+  constructor(){                                          //database uzaktan txt dosyasından çekiliyor
     this.movieDatabase="https://raw.githubusercontent.com/ibrahimyyildirim/deneme/master/film.txt";
     this.tickets=new Map();
     this.readMovie();
   }
 
-readMovie(){
+readMovie(){                                              //text dosyasının fetch edildiği kısım
   console.log("readMovie "+this.movieDatabase);
   fetch(this.movieDatabase)
   .then(r => r.text())
   .then(r => this.addMovie(r))        
 }
 
-addMovie(txt){
+addMovie(txt){                                            //satırlar split edilerek film-tarih-seans-koltuk key olarak ekleniyor
   let a = txt.split("\n");
   for (let s of a) {
     let ticket = this.parseMovie(s);
@@ -100,14 +104,13 @@ addMovie(txt){
   }
 }
 
-parseMovie(line){
+parseMovie(line){                                         //split edilen satırlar ile ticket sınıfından yeni bilet oluşturuluyor
   let s = line.split("\t");
    const ticketLine = new ticket(s[0],s[1],s[2],s[3],s[4],s[5])
    return ticketLine
   }
 
-kontrol(){
-
+kontrol(){                                       //okunan biletler seçili filmler ile kontrol edilip koltuklar satın alındı olarak değişiyor                             
   var movieName=document.getElementById('movie1').value;
   var movieSession=document.getElementById('session1').value;
   var movieDate=document.getElementById('date').value;
@@ -120,7 +123,7 @@ kontrol(){
   }
 
 }
-griYap(koltuk) {
+griYap(koltuk) {                                              // koltukları satın alınmış hale getiren fonksiyon                 
   
   [].forEach.call(document.querySelectorAll(".seatNumber"), function(el) {
     var element2 = document.getElementById(el.id);
@@ -128,7 +131,7 @@ griYap(koltuk) {
     element2.classList.add("seatUnavailable");
   });
 }
-sat(){
+sat(){                                                      //bilet satın alınma işleminin yapıldığı fonksiyon
   console.log("tiklandi");
   [].forEach.call(document.querySelectorAll(".seatNumber"), function(el2) {
     var element2 = document.getElementById(el2.id);
@@ -136,22 +139,22 @@ sat(){
     console.log(element2.id)
     element2.classList.add("seatUnavailable");
     element2.classList.remove("seatSelected");
-    var f= element2.id;
-    var c=document.getElementById('movie1').value;
-    var e=document.getElementById('date').value;
-    var d=document.getElementById('session1').value;
-    var g=document.getElementById('name').value;
-    var h=document.getElementById('email').value;
-    const dynamicData = new ticket(c,e,d,f,g,h);
+    var f= element2.id;                                 //seçilen koltuk
+    var c=document.getElementById('movie1').value;      //seçilen film
+    var e=document.getElementById('date').value;        //seçilen tarih
+    var d=document.getElementById('session1').value;    //seçilen seans
+    var g=document.getElementById('name').value;        //girilen isim 
+    var h=document.getElementById('email').value;       // girilen mail
+    const dynamicData = new ticket(c,e,d,f,g,h);        //ticket sınıfından yeni bir nesne üretiliyor
     let dynamicKey= dynamicData.name+" "+dynamicData.date+" "+dynamicData.session+" "+dynamicData.seat;
-    db.tickets.set(dynamicKey,dynamicData)
+    db.tickets.set(dynamicKey,dynamicData)              //tickets map'ine film adı-tarih-seans-koltuk key olacak şekilde set ediliyor
   
     let dynamicBilet= "Ad Soyad &emsp;: "+dynamicData.customer
     +"<br>Tarih&emsp;&emsp;&emsp;: "+dynamicData.date
     +"<br>Film    &emsp;&emsp;&emsp;: "+dynamicData.name
-    +"<br>Seans&emsp;&emsp;&emsp;: "+dynamicData.session
+    +"<br>Seans&emsp;&emsp;&emsp;: "+dynamicData.session+":00"
     +"<br>Koltuk No &emsp;: "+dynamicData.seat;
-    a.push(dynamicBilet);
+    a.push(dynamicBilet);                                 // bilet çıktısı için bilgiler array'e ekleniyor
      //console.log(a)
     //console.log(dynamicKey)
 
@@ -161,7 +164,7 @@ sat(){
     }
 
 }
-function temizle2(){
+function temizle2(){                                      // form ekranı temizleme fonksiyonu
   document.getElementById("koltukNumara").innerHTML="-";
   document.getElementById("koltukFiyat").innerHTML="-₺";
   document.getElementById("email").innerHTML='';
@@ -169,19 +172,17 @@ function temizle2(){
   list1= [];
   list = [];
 }
-function kontrolSat(){
+
+function kontrolSat(){                                    // satın alma ekranı form bilgileri kontrol fonksiyonu
   var Kname=document.getElementById("name").value;
   var Kemail=document.getElementById("email").value;
   if(Kname==""){
     alert("İsim alanı boş olamaz.")
-    temizle();
     }
   else if(list.length==0){
   alert("Koltuk seçimi yapılmadı.")
-  temizle();
   }else if(Kemail==""){
   alert("Mail alanı boş olamaz.")
-  temizle();
   }
   else {
     db.sat();  
@@ -190,7 +191,7 @@ function kontrolSat(){
     temizle2();
    }
 }
-function makeTable(){
+function makeTable(){                                        // bilet çıktısı için tablo fonksiyonu
   var satir="";
   satir+="<tr><th></th></tr>"
   
@@ -204,7 +205,7 @@ function makeTable(){
  a =[]
  }
 
- function satilanBilet(){
+ function satilanBilet(){                                     // filmin seçili seansına ait bütün bilet bilgileri ve
   var secilenFilm = document.getElementById('movie1').value;
   var secilenTarih = document.getElementById('date').value;
   var secilenSeans = document.getElementById('session1').value;
@@ -235,3 +236,27 @@ function makeTable(){
  
  }
  
+ function controlHours(){                             // seans saat kontrolü
+var date = new Date();
+var day = date.getDate();
+var month = date.getMonth() + 1;
+var year = date.getFullYear();
+
+if (month < 10) month = "0" + month;
+if (day < 10) day = "0" + day;
+
+var sessionDate = year + "-" + month + "-" + day;      
+  var todayDate = date.getDate();
+  var todayHours = date.getHours();
+  var sessionHours = document.getElementById("session1").value;
+  var seciliTarih = document.getElementById("date").value;
+  console.log(todayHours+sessionHours+"gün"+todayDate+sessionDate +"------> "+seciliTarih) 
+
+
+  todayHours;
+  if(sessionDate===seciliTarih&&sessionHours<todayHours ){
+      allSeatUnav();
+      alert("Önceki bir tarihe bilet alamazsınız.");
+  }
+  }
+  

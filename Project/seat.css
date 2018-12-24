@@ -12,21 +12,33 @@
 
 .seatsReceipt {text-align: center;}
 
-.perde{
-
-size: 16px;	
-}
 .seatNumber {
 	display: inline;
-	padding: 0.7%;
+	padding: 0.8%;
 	background-color: #267082;
 	color: #FFF;
-	border-radius: 18%;
+	border-radius: 14%;
 	cursor: default;
 	line-height: 25%;
 	text-align: center;
 	cursor: pointer;
  }
+
+ select {
+	border: 1px solid #ccc;
+	height: 34px;
+	width: auto;
+	padding: 6px 12px;
+	line-height: 1.42857143;
+  }
+
+  .date {
+	border: 1px solid #ccc;
+	width: auto;
+	padding: 6px 12px;
+	line-height: 1.42857143;
+  }
+
 
 .seatRow {
 	padding: 1%;
@@ -50,3 +62,50 @@ size: 16px;
 .hidden {display: none;}
 
 .seatsAmount {max-width: 2em;}
+
+
+*,*:before,*:after {
+	box-sizing: border-box;
+  }
+  
+  html {
+	font-family: "Work Sans", sans-serif;
+	color: rgb(0, 0, 0);
+	font-size: 16px;
+	line-height: 1.5;
+	font-weight: 300;
+  }
+  
+  body {
+	margin: 0;
+	padding: 0;
+	background: #f8f8f8;
+  }
+  
+  .header {
+	background-color: #267082;
+	background-image: linear-gradient(to bottom, rgba(rgb(219, 203, 214), .5), transparent);
+	min-height: 100px;
+	padding: 1rem 2rem;
+	color: white;
+	text-align: center;
+  }
+  
+  h1 {
+	font-size: 3rem;
+	letter-spacing: .1ch;
+	font-weight: 300;
+	margin: 0 0 1rem;
+  }
+  
+
+  
+  .canvas-wrap {
+	max-width: 100%;
+	overflow: hidden;
+	position: relative;
+  }
+  
+  canvas {
+	display: block;
+  }
