@@ -1,7 +1,7 @@
 # Advanced Programming
 
 # Project
-[Movie Ticket Booking System](https://ibrahimyyildirim.github.io/advancedProgramming/Project/index.html)<br>
+[Ticket Booking System](https://ibrahimyyildirim.github.io/advancedProgramming/Project/index.html)<br>
 
 # ClassWorks
 [CW9 - Using Canvas](https://ibrahimyyildirim.github.io/advancedProgramming/CW9/cw9.html)<br>
