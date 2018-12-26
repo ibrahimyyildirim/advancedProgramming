@@ -237,26 +237,32 @@ function makeTable(){                                        // bilet çıktıs�
  }
  
  function controlHours(){                             // seans saat kontrolü
-var date = new Date();
-var day = date.getDate();
-var month = date.getMonth() + 1;
-var year = date.getFullYear();
+var date2 = new Date();
+var day = date2.getDate();
+var month = date2.getMonth() + 1;
+var year = date2.getFullYear();
 
 if (month < 10) month = "0" + month;
 if (day < 10) day = "0" + day;
 
-var sessionDate = year + "-" + month + "-" + day;      
-  var todayDate = date.getDate();
-  var todayHours = date.getHours();
+var sessionDate = year + "-" + month + "-" + day;    
+
+  var todayDate = date2.getDate();
+  var todayHours = date2.getHours();
   var sessionHours = document.getElementById("session1").value;
   var seciliTarih = document.getElementById("date").value;
-  console.log(todayHours+sessionHours+"gün"+todayDate+sessionDate +"------> "+seciliTarih) 
+  console.log(todayHours+sessionHours+"gün"+todayDate+sessionDate +"------> "+seciliTarih+"-----") 
 
-
+  var seciliGün = document.getElementById("date").value;
+  console.log(seciliGün)
   todayHours;
   if(sessionDate===seciliTarih&&sessionHours<todayHours ){
       allSeatUnav();
-      alert("Önceki bir tarihe bilet alamazsınız.");
+      alert("Önceki bir seansa bilet alamazsınız.");
+  }
+  else if (seciliTarih<sessionDate){
+      allSeatUnav();
+      alert("Önceki bir tarihe bilet alamazsınız.")
   }
   }
   

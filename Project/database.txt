@@ -1,0 +1,66 @@
+Goodfellas	2018-12-24	13	D-8	ibrahim Yýldýrým	ibrahim@mail.com
+Goodfellas	2018-12-24	13	D-9	ibrahim Yýldýrým	ibrahim@mail.com
+Goodfellas	2018-12-24	13	D-10	ibrahim Yýldýrým	ibrahim@mail.com
+Goodfellas	2018-12-24	13	A-11	Mehmet Kurt	mehmet@mail.com
+Goodfellas	2018-12-24	13	A-12	Mehmet Kurt	mehmet@mail.com
+Goodfellas	2018-12-24	13	E-1	John Abruzzi	john@mail.com
+Goodfellas	2018-12-24	13	E-2	John Abruzzi	john@mail.com
+Goodfellas	2018-12-24	13	H-4	Lincoln Burrows	lincoln@mail.com
+Goodfellas	2018-12-24	13	H-5	Lincoln Burrows	lincoln@mail.com
+Goodfellas	2018-12-24	13	E-4	Hakan Mert	hakan@mail.com
+Goodfellas	2018-12-24	13	E-5	Hakan Mert	hakan@mail.com
+Goodfellas	2018-12-24	13	B-1	Ayþe Fatma	ayse@mail.com
+Goodfellas	2018-12-24	13	B-2	Ayþe Fatma	ayse@mail.com
+Goodfellas	2018-12-24	13	B-3	Ayþe Fatma	ayse@mail.com
+The Great Gatsby	2018-12-24	13	A-1	Di Caprio	caprio@mail.com
+The Great Gatsby	2018-12-24	13	A-2	Di Caprio	caprio@mail.com
+The Great Gatsby	2018-12-24	13	A-3	Di Caprio	caprio@mail.com
+The Great Gatsby	2018-12-24	13	A-4	Di Caprio	caprio@mail.com
+The Great Gatsby	2018-12-24	13	A-5	Di Caprio 	caprio@mail.com
+Inception	2018-12-24	11	D-8	ibrahim Yýldýrým	ibrahim@mail.com
+Inception	2018-12-24	11	D-9	ibrahim Yýldýrým	ibrahim@mail.com
+Inception	2018-12-24	11	D-10	ibrahim Yýldýrým	ibrahim@mail.com
+Inception	2018-12-24	11	A-11	Mehmet Kurt	mehmet@mail.com
+Inception	2018-12-24	11	A-12	Mehmet Kurt	mehmet@mail.com
+Inception	2018-12-24	11	E-1	John Abruzzi	john@mail.com
+Inception	2018-12-24	11	E-2	John Abruzzi	john@mail.com
+Inception	2018-12-24	11	H-4	Lincoln Burrows	lincoln@mail.com
+Inception	2018-12-19	11	H-5	Lincoln Burrows	lincoln@mail.com
+Inception	2018-12-19	11	C-4	Hakan Mert	hakan@mail.com
+Inception	2018-12-19	11	C-5	Hakan Mert	hakan@mail.com
+Inception	2018-12-19	11	G-7	Ayþe Fatma	ayse@mail.com
+Inception	2018-12-19	11	G-8	Ayþe Fatma	ayse@mail.com
+Inception	2018-12-19	11	G-9	Ayþe Fatma	ayse@mail.com
+Predestination	2018-12-24	11	A-1	Mehmet Kurt	mehmet@mail.com
+Predestination	2018-12-24	11	A-2	Mehmet Kurt	mehmet@mail.com
+Predestination	2018-12-24	11	E-4	John Abruzzi	john@mail.com
+Predestination	2018-12-24	11	E-5	John Abruzzi	john@mail.com
+Predestination	2018-12-19	11	H-2	Lincoln Burrows	lincoln@mail.com
+Predestination	2018-12-19	11	H-2	Lincoln Burrows	lincoln@mail.com
+Predestination	2018-12-19	11	C-8	Hakan Mert	hakan@mail.com
+Predestination	2018-12-19	11	C-9	Hakan Mert	hakan@mail.com
+Predestination	2018-12-19	11	G-2	Ayþe Fatma	ayse@mail.com
+Predestination	2018-12-19	11	G-3	Ayþe Fatma	ayse@mail.com
+Predestination	2018-12-19	11	G-4	Ayþe Fatma	ayse@mail.com
+Focus	2018-12-24	13	A-11	Mehmet Kurt	mehmet@mail.com
+Focus	2018-12-24	13	A-12	Mehmet Kurt	mehmet@mail.com
+Focus	2018-12-24	13	E-1	John Abruzzi	john@mail.com
+Focus	2018-12-24	13	E-2	John Abruzzi	john@mail.com
+Focus	2018-12-19	13	H-4	Lincoln Burrows	lincoln@mail.com
+Focus	2018-12-19	13	H-5	Lincoln Burrows	lincoln@mail.com
+Focus	2018-12-19	13	C-4	Hakan Mert	hakan@mail.com
+Focus	2018-12-19	13	C-5	Hakan Mert	hakan@mail.com
+Focus	2018-12-19	13	G-7	Ayþe Fatma	ayse@mail.com
+Focus	2018-12-19	13	G-8	Ayþe Fatma	ayse@mail.com
+Focus	2018-12-19	13	G-9	Ayþe Fatma	ayse@mail.com
+Focus	2018-12-24	13	A-11	Mehmet Kurt	mehmet@mail.com
+Focus	2018-12-24	13	A-12	Mehmet Kurt	mehmet@mail.com
+Focus	2018-12-24	13	E-1	John Abruzzi	john@mail.com
+Focus	2018-12-24	13	E-2	John Abruzzi	john@mail.com
+Focus	2018-12-19	13	H-4	Lincoln Burrows	lincoln@mail.com
+Focus	2018-12-19	13	H-5	Lincoln Burrows	lincoln@mail.com
+Focus	2018-12-19	13	C-4	Hakan Mert	hakan@mail.com
+Focus	2018-12-19	13	C-5	Hakan Mert	hakan@mail.com
+Focus	2018-12-19	13	G-7	Ayþe Fatma	ayse@mail.com
+Focus	2018-12-19	13	G-8	Ayþe Fatma	ayse@mail.com
+Focus	2018-12-19	13	G-9	Ayþe Fatma	ayse@mail.com

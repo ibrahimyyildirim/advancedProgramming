@@ -31,7 +31,7 @@
     </select>
      
      
-    <input class="date"onchange="temizle();db.kontrol();temizle2();satilanBilet();controlHours();" type="date" name="date" id="date" min="2018-12-24"max="2018-12-31" required="">
+    <input class="date"onchange="temizle();db.kontrol();temizle2();satilanBilet();controlHours();" type="date" name="date" id="date" min="today" required="">
      
 
     <select onchange="temizle();db.kontrol();temizle2();satilanBilet();controlHours();" required="" id="session1">
@@ -177,7 +177,8 @@
         </div>
     <div class="seatRow">
             <div class="seatRowNumber">
-                H
+                H 
+
             </div>
             <div id="H-1" role="checkbox" class=" seatNumber ">1</div>
             <div id="H-2" role="checkbox" class=" seatNumber ">2</div>
@@ -252,23 +253,34 @@
 </p>
 
     <script src="baslik.js"> </script>
-    <script src="currentDate.js"> </script>
+  <script src="currentDate.js"> </script>
     <script src="pop_up.js"></script>
     <script src="pop_up2.js"></script>
     <script src="seat.js"></script>
     <script>db= new database(); 
 </script>
-  
-  
 
 <script> 
+	var today = new Date();
+	var dd = today.getDate();
+    const currentTime=today.getHours();
+	var mm = today.getMonth()+1; //January is 0!
+	var yyyy = today.getFullYear();
+ 		if(dd<10){
+       		 dd='0'+dd
+    	} 
+    	if(mm<10){
+        	mm='0'+mm
+    	} 
+	today = yyyy+'-'+mm+'-'+dd;
+	document.getElementById("date").setAttribute("min", today);
 
 function openMessage(){
     
 x = window.innerWidth;
 y = window.innerHeight;
     if(y>x){
-alert("Cihazınızın mevcut ekran ölçülerine göre yatay kullanmanız önerilir.");
+alert("Kullandığınız cihazın ekran ölçülerine göre yatay kullanmanız önerilir.");
 }
 console.log("genişlik:"+x+"yükseklik:"+y)
 }
